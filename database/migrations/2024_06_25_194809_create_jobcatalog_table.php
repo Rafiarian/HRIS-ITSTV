@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('jobcatalog', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('program')->constrained('program');
             $table->string('role');
             $table->string('point');
             $table->timestamps();
