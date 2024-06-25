@@ -25,6 +25,10 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'eureka-batch' => 'E-16',
+            'speciality1' => 'hr',
+            'speciality2' => 'admin',
+            'userPhoto' => 'netnot',
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),

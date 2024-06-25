@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('qc', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('jobId')->constrained('job');
+            $table->foreignId('jobId')->constrained('job')->onDelete('cascade');
             $table->foreignId('assist_script')->constrained('users');
             $table->foreignId('assist_editor')->constrained('users');
             $table->foreignId('assist_cam')->constrained('users');
